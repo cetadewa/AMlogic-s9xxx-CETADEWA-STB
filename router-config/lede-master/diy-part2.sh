@@ -45,7 +45,7 @@ pushd package/openwrt-openclash/tools/po2lmo && make && sudo make install 2>/dev
 
 Add luci-app-ssr-plus
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/openwrt-ssrplus
-rm -rf package/openwrt-ssrplus/luci-app-ssr-plus/po/zh_Hans 2>/dev/null
+rm -rf package/openwrt-ssrplus/luci-app-ssr-plus/po/zh_Hans 2>/dev/null 
 
 # Add p7zip
 # svn co https://github.com/hubutui/p7zip-lede/trunk package/p7zip
