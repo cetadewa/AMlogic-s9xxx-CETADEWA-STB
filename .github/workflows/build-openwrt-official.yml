@@ -128,7 +128,7 @@ jobs:
             * Firmware information
             Default IP: 192.168.1.1
             Default username: root
-            Default password: jogjaistimewa
+            Default password: password
             Default WIFI name: OpenWrt
-            Default WIFI password: jogjaistimewa
+            Default WIFI password: none
             Install to EMMC: Login to OpenWrt → System → Amlogic Service → Install OpenWrt
