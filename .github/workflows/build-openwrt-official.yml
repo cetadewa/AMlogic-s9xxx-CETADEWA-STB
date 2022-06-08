@@ -20,9 +20,9 @@ on:
         required: false
         default: "5.15.25_5.10.100"
       openwrt_size:
-        description: "Set the rootfs size(Unit: MiB)."
+        description: "Set the rootfs size(Unit: GiB)."
         required: false
-        default: "1500"
+        default: "1.76"
   #schedule:
     #- cron: '0 17 * * 0'
 
