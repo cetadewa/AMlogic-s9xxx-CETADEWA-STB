@@ -22,7 +22,7 @@ on:
       openwrt_size:
         description: "Set the rootfs size(Unit: MiB)."
         required: false
-        default: "1091"
+        default: "1500"
   #schedule:
     #- cron: '0 17 * * 0'
 
