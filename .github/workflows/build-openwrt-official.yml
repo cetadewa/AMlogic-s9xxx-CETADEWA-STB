@@ -20,9 +20,9 @@ on:
         required: false
         default: "5.15.25_5.10.100"
       openwrt_size:
-        description: "Set the rootfs size(Unit: GiB)."
+        description: "Set the rootfs size(Unit: MiB)."
         required: false
-        default: "1.76"
+        default: "970"
   #schedule:
     #- cron: '0 17 * * 0'
 
@@ -100,7 +100,7 @@ jobs:
         run: |
           cd openwrt
           echo -e "$(nproc) thread compile"
-          make -j$(($(nproc) + 1)) V=s || make -j1 || make -j1 V=s
+          make -j$(($(nproc) + 3)) V=s || make -j3 || make -j3 V=s
           grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
           [ -s DEVICE_NAME ] && echo "DEVICE_NAME=$(cat DEVICE_NAME)" >> $GITHUB_ENV
           echo "FILE_DATE=$(date +"%m.%d.%H%M")" >> $GITHUB_ENV
